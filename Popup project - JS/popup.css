@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgba(19, 19, 23, 0.9);
+}
+
+.home-section{
+    background-image: url("modal-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+}
+
+.center {
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.btn-model{
+    font-size: large;
+    color: black;
+    background: #5454ff;
+    border: none;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.model-parent{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.model{
+    background: white;
+    width: 70%;
+    padding: 30px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    animation: 2s drop;
+}
+
+@keyframes drop{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 50%;
+    }
+}
+
+.x-close{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: x-large;
+    cursor: pointer;
+}
