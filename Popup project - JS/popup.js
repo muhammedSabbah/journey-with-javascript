@@ -5,6 +5,7 @@ var btnClode = document.querySelector(".x-close");
 
 btnModel.addEventListener("click", appearModel);
 btnClode.addEventListener("click", hideModel);
+parentModel.addEventListener("click", parentClick);
 
 function appearModel(){
     parentModel.style.display = "block";
@@ -13,5 +14,11 @@ function appearModel(){
 
 function hideModel(){
     parentModel.style.display = "none";
-    homeSection.style.filter = "none"
+    homeSection.style.filter = "none";
+}
+
+function parentClick(e) {
+    if (e.target.className == "model-parent") {
+        hideModel();
+    }
 }
